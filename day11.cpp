@@ -127,10 +127,10 @@ int main(int argc, char* argv[])
             if (stone == 0){
                 result_stones[1] += stone_map[stone]; // why can't this just be plus 1?
             } else if (str_stone.length() % 2 == 0){
-                size_t half = str_stone.length() / 2;
-                long left_half = std::stoi(str_stone.substr(0, half));
+                long long half = str_stone.length() / 2;
+                long long left_half = std::stoi(str_stone.substr(0, half));
                 result_stones[left_half] += stone_map[stone];
-                long right_half = std::stol(str_stone.substr(half, str_stone.length()));
+                long long right_half = std::stol(str_stone.substr(half, str_stone.length()));
                 result_stones[right_half] += stone_map[stone];
             } else {
                 result_stones[stone * 2024] += stone_map[stone];
